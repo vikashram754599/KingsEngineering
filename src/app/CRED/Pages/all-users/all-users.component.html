@@ -1,0 +1,51 @@
+@if (toDisplay) {
+
+    <div *ngFor="let item of userList" class="bg-pink-300 rounded-2xl mt-8 p-2 h-20 flex flex-row items-center justify-center">
+        <p class="font-semibold text-pink-900 text-2xl " style="width: 750px;">
+          {{ item.userName }}
+        </p>
+        <img class="w-12 mr-10" src="/images/delete.png" (click)="deleteUser(item)">
+        <img class="w-12 mr-10" src="/images/pencil.png" (click)="updateUser(item)">
+      </div>
+
+}
+@else {
+
+    <div class="flex items-center flex-col w-full h-full bg-white">
+        <p class="bgh-10 m-10 font-bold bg-slate-50">Pls Update details</p>
+        <div class=" w-60 h-10 ml-auto mb-10">
+        <img src="/images/close.png"alt=""class="w-10 h-10"(click)="toDisplay=true">
+        </div>
+        <div class="bg-slate-300 rounded-3xl pl-20 pr-20 pt-10 pb-10 flex flex-col items-center">
+        <input class="w-80 h-12 rounded-xl border-2 border-blue-700 pl-4"[(ngModel)]="userName">
+        <input class="w-80 h-12 mt-6 rounded-xl border-2 border-blue-700 pl-4"[(ngModel)]="userAge">
+        <button class="w-60 h-12 mt-6 rounded-3xl bg-green-400 font-bold text-white"(click)="clickUpdateUser()">Update Dtails</button>
+        </div>
+        </div>
+
+}
+
+
+
+  
+
+
+
+<!-- <div *ngFor="let item of userList" class="bg-pink-400 rounded-2xl mt-8 p-2 flex flex-col items-center justify-center">
+    <p class="font-semibold text-pink-900 text-2xl" style="width: 750px;">
+      {{ item.userName }}
+    </p>
+  </div> -->
+  
+<!-- @for (item of userList; track item) {
+
+    <div class="bg-pink-400 rounded-2xl mt-8 p-2 flex flex-col items-center justify-center">
+      <P class="font-semibold text-pink-900 text-2xl" style="width: 750px;">
+        Vikash
+      </P>
+    </div> 
+
+}
+
+  
+ -->

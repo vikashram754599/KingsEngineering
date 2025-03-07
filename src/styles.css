@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active-link {
+    height: 0cqh;
+    padding: 6;
+    font-weight: bold;
+    color:white;
+    flex:content;
+    background-color: blue;
+    border:chocolate;
+  }
+  
