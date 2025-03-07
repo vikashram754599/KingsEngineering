@@ -1,4 +1,78 @@
 # CrudApp
+Project Setup-
+-----------------------------------------
+
+Steps to create a new Angular project
+1.Install Angular CLI globally. You can do this by running npm install -g @angular/cli in your terminal. 
+2.Run ng new in the directory where you want to create your project. 
+3.Provide a name for your project. 
+4.Answer prompts for optional configuration. You can accept the defaults by pressing Enter. 
+5.Wait for the Angular CLI to install dependencies and create the project. 
+
+Commands to generate new component(CRED/Pages/All_users):
+ng g c CRED/Pages/All_users
+
+Setup JSON Server:
+https://www.npmjs.com/package/json-server -------->For the dummy server.
+
+1. install json-server:
+   
+   npm install json-server
+
+2. Create a db.json or db.json5 file
+
+   {
+  "userList": [
+    { 
+     "userName": "Kings Engineering",
+      "userAge": "26",
+      "id": "1234"
+     
+    },
+    { 
+     "userName": "Vikash Ram",
+      "userAge": "28",
+      "id": "12345"
+     
+    },
+    ]
+}
+
+3. Pass it to JSON Server CLI:
+    
+   npx json-server db.json
+
+4. Get a REST API(hit below URL to get JSON in local browser)
+
+http://localhost:3000/userList
+
+
+{
+  "userList": [
+    { 
+     "userName": "Kings Engineering",
+      "userAge": "26",
+      "id": "1234"
+     
+    },
+    { 
+     "userName": "Vikash Ram",
+      "userAge": "28",
+      "id": "12345"
+     
+    }
+    ]
+}
+
+
+
+Service setup and click to add data in API:
+
+To create a new service: ng generate service ServiceName
+ng generate service app/services/https-services
+
+
+--------------------------------------------------------------------------
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
 
